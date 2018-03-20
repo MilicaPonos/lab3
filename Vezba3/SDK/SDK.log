@@ -1,0 +1,3 @@
+09:55:55.674 INFO  - Processing command line option -hwspec C:\Users\student\Desktop\MilicaPonos\Vezba3\SDK\SDK_Export\hw\system.xml. 
+10:02:49.896 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/MilicaPonos/Vezba3/SDK/Vezba3_hw_platform/download.bit" 
+10:16:29.665 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
