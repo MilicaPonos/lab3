@@ -634,4 +634,6 @@
 #define XPAR_MICROBLAZE_HW_VER "8.50.b"
 
 /******************************************************************/
-
+/* Definitions for peripheral AXI_PWM_0 */
+#define XPAR_MY_PERIPHERAL_0_BASEADDR 0x7DE00000
+#define XPAR_MY_PERIPHERAL_0_HIGHADDR 0x7DE0FFFF

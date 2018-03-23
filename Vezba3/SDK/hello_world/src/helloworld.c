@@ -41,13 +41,22 @@ void print(char *str);
 int main()
 {
 	unsigned int DataRead;
+	unsigned int OldData;
+
     init_platform();
 
-    print("Hello World\n\r");
+    xil_printf("%c[2j", 27);
+	OldData=(unsigned int)  0xffffffff;
 
     while(1){
-    	DataRead=XIo_In32(XPAR_DIP_SWITCHES_BASEADDR);
-    	xil_printf("\n\rDataRead=%x", DataRead);
+    	DataRead=XIo_In32(XPAR_MY_PERIPHERAL_0_BASEADDR);
+
+		if(DataRead!=OldData){
+			xil_printf("DIP Switch settings: 0x%2X\r\n", DataRead);
+           // Set the LED outputs to the DIP switch values
+            XIo_Out32(XPAR_MY_PERIPHERAL_0_BASEADDR, DataRead);
+			OldData = DataRead;
+		}
 
     }
 
